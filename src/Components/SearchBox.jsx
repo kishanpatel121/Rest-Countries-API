@@ -6,14 +6,14 @@ import search from "../assets/search.svg";
 
 export default function SearchBox(props) {
   const { toggleFilter } = React.useContext(CountriesDataContext);
-  const { darkTheme} = React.useContext(DarkThemeContext);
+  const { darkTheme } = React.useContext(DarkThemeContext);
   const themeClassName = darkTheme ? "dark-search-box" : "";
 
   return (
     <div className={`search-box ${themeClassName}`}>
       <img className="search-icon" src={search} alt="search icon" />
       <input
-        type="name"
+        type="text"
         name="search"
         className="search-input"
         placeholder="Search for a country..."
